@@ -1,17 +1,258 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout title="Bienenwerk">
+    <!-- BG Hero Start -->
+    <div class="bg-hero">
+      <div class="overlay-hero">
+        <!-- Navbar Start -->
+        <div class="container d-none d-lg-flex justify-content-between border-hero">
+          <div class="d-flex gap-2 py-2">
+            <a href="#" class="icon-circle-32 share" data-share-to="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="icon-circle-32 share" data-share-to="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="icon-circle-32 share" data-share-to="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="icon-circle-32 share" data-share-to="linkedin">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+          <div id="alert-container"></div>
+          <div class="d-flex gap-3 align-items-center justify-content-center lato c-white">
+            <div>
+              <i class="fa-regular fa-envelope fs-16"></i><span class="ms-2 fs-13">contact@bienenwerk.at</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone me-2 fs-16"></i><span class="fs-13">+43 123 456 789</span>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark lato">
+          <div class="container-lg d-flex">
+            <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="/">
+              <img src="/img/wivana-logo-dark.png" alt="Bienenwerk" width="166" height="41" class="d-inline-block align-text-top" />
+            </a>
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" data-bs-scroll="true" aria-labelledby="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-lg-flex justify-content-center">
+                <ul class="navbar-nav gap-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/ueber-uns">Über uns</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/kontakt">Kontakt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-none d-lg-flex">
+              <a href="/kontakt" class="btn-light">Tour buchen</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+        <!-- Hero Section Start -->
+        <section class="section-m mx-auto container-lg">
+          <div class="c-white mb-4 mb-lg-0 fade-in">
+            <div>
+              <span class="icon-circle-17"><i class="fa-solid fa-plus"></i></span>
+              <span class="ms-2 philosopher fs-14">BIENENWERK – IMKEREI & HONIG</span>
+            </div>
+            <h1 class="hero-title mt-3 mb-5">
+              Erleben Sie die Welt der Bienen und unseren naturreinen Honig
+            </h1>
+            <div>
+              <p class="lato fs-16 c-silver hero-subtitle">
+                Willkommen bei Bienenwerk – Ihrer Imkerei für naturreinen Honig, geführte Touren und alles rund um die faszinierende Welt der Bienen.
+              </p>
+            </div>
+          </div>
+          <div class="d-block d-lg-flex gap-4 lato c-white fade-in">
+            <div>
+              <a href="/kontakt" class="btn-light mb-3 mb-lg-0">Kontakt aufnehmen</a>
+            </div>
+          </div>
+          <div class="d-block d-lg-flex gap-5 content-m">
+            <div class="form-container fade-in">
+              <form action="#" class="d-block d-lg-flex gap-4 align-items-center justify-content-between">
+                <div class="mb-3">
+                  <label for="name" class="c-white philosopher fs-14">IHR NAME</label>
+                  <input type="text" class="form-control" id="name" placeholder="Ihr Name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="c-white philosopher fs-14">IHRE NUMMER</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Ihre Nummer" required />
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="c-white philosopher fs-14">Datum</label>
+                  <input type="date" class="form-control date" id="date" required />
+                </div>
+                <div>
+                  <button class="btn-light mt-3">Tour buchen</button>
+                </div>
+              </form>
+            </div>
+            <div class="d-flex align-items-end c-text lato gap-3 mt-3 mt-lg-0 fade-in">
+              <div>Honig</div>
+              <div>Imkerei</div>
+              <div>Natur</div>
+            </div>
+          </div>
+        </section>
+        <!-- Hero Section End -->
+      </div>
+    </div>
+    <!-- BG Hero End -->
+
+    <!-- About Start -->
+    <div class="bg-subtle w-100">
+      <div class="width-base">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2 g-5">
+            <div class="col px-0 order-1 order-lg-0 fade-in px-3 py-0">
+              <div class="row row-cols-1 row-cols-sm-2 g-3">
+                <div class="col d-flex flex-column gap-3">
+                  <div><img src="/img/about-1.png" alt="Imkerei" class="img-about" /></div>
+                  <div><img src="/img/about-1.png" alt="Imkerei" class="img-about" /></div>
+                </div>
+                <div class="col">
+                  <div><img src="/img/about-2.png" alt="Imkerei" class="img-about-last" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex flex-column justify-content-between gap-4 px-3 py-0 ps-lg-5 pt-5 pt-lg-0 fade-in">
+              <div>
+                <div>
+                  <span class="icon-circle-17-main"><i class="fa-solid fa-plus c-main"></i></span>
+                  <span class="ms-2 philosopher fs-14 c-main">ÜBER UNS</span>
+                </div>
+                <div class="title-about c-semi-black mt-4">Leidenschaft für Bienen und naturreinen Honig</div>
+              </div>
+              <span class="text-grey">Bei Bienenwerk verbinden wir traditionelle Imkerei mit modernem Wissen – für Honig, der schmeckt wie die Natur ihn gemeint hat.</span>
+              <div class="d-block d-lg-flex">
+                <div class="d-flex align-items-center my-3">
+                  <span class="icon-circle-37-main me-3"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div>
+                  <span class="text-subtitle c-semi-black my-4">Naturreiner Honig</span>
+                  <br />
+                  <p class="text-grey my-3">Unsere Bienen sammeln in unberührter Natur – ohne Zusätze, ohne Kompromisse.</p>
+                </div>
+              </div>
+              <div class="dblock d-lg-flex">
+                <div class="d-flex align-items-center my-3">
+                  <span class="icon-circle-37-main me-3"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div>
+                  <span class="text-subtitle c-semi-black my-4">Geführte Touren</span>
+                  <br />
+                  <p class="text-grey my-3">Erleben Sie hautnah, wie Bienen leben und Honig entsteht – für Groß und Klein.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Footer Start -->
+    <div class="bg-darker w-100">
+      <div class="width-base">
+        <div class="container px-0 footer-padding">
+          <div class="row row-cols-1 row-cols-lg-2 g-3">
+            <div class="col">
+              <div>
+                <a href="/"><img src="/img/wivana-logo-dark.png" alt="Bienenwerk" class="footer-logo" /></a>
+              </div>
+              <div class="my-4">
+                <div class="text-silver subtext-footer">Naturreiner Honig aus leidenschaftlicher Imkerei.</div>
+              </div>
+              <div class="d-flex gap-2 py-2">
+                <span class="icon-circle-32 bg-grey share" data-share-to="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-end align-items-end">
+              <form class="newsletter-container" id="newsletterForm">
+                <h3 class="text-subtitle c-white">Newsletter</h3>
+                <div class="popup-message" id="popupMessage">
+                  <div><i class="fa-solid fa-check fa-2xl"></i></div>
+                  Danke! Sie haben sich erfolgreich angemeldet.
+                </div>
+                <div class="newsletter-form">
+                  <input type="email" placeholder="Ihre E-Mail" class="email-input" />
+                  <button type="submit" class="btn-newsletter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 207.99" width="32" height="15">
+                      <defs><style>.cls-1{fill:#fff;stroke-width:0px;}</style></defs>
+                      <path class="cls-1" d="M504.66,85.8L422.97,4.11c-5.48-5.48-14.36-5.48-19.83,0-5.48,5.48-5.48,14.36,0,19.83l66.02,66.02H162.65c-7.75,0-14.03,6.27-14.03,14.03s6.27,14.03,14.03,14.03h305.63l-66.05,66.02c-5.48,5.48-5.48,14.36,0,19.83,2.74,2.74,6.33,4.11,9.92,4.11s7.18-1.37,9.92-4.11l82.6-82.57c9.78-9.78,9.78-25.72,0-35.51Z"/>
+                      <path class="cls-1" d="M120.87,89.97H14.03c-7.75,0-14.03,6.27-14.03,14.03s6.27,14.03,14.03,14.03h106.84c7.75,0,14.03-6.27,14.03-14.03s-6.27-14.03-14.03-14.03Z"/>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-12 col-lg-4">
+              <h3 class="text-subtitle c-white mb-4">Öffnungszeiten</h3>
+              <p class="text-silver mb-4">Wir freuen uns auf Ihren Besuch</p>
+              <div class="mb-2">
+                <i class="fa-regular fa-clock" style="color: #c7c7c7"></i>
+                <span class="text-silver"> Mo–Fr: 9:00–18:00 Uhr</span>
+              </div>
+              <div>
+                <i class="fa-regular fa-clock" style="color: #c7c7c7"></i>
+                <span class="text-silver"> Sa–So: nach Vereinbarung</span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div>
+                <h3 class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0">Adresse</h3>
+                <div><p class="text-silver pe-5">Österreich</p></div>
+              </div>
+              <div>
+                <h3 class="text-subtitle c-white my-4">Kontakt</h3>
+                <div>
+                  <p class="text-silver my-0">+43 123 456 789</p>
+                  <p class="text-silver">contact@bienenwerk.at</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-1"></div>
+            <div class="col-12 col-lg-2">
+              <h3 class="text-subtitle c-white mb-0 mb-lg-4 mt-5 mt-lg-0">Navigation</h3>
+              <ul class="footer-links">
+                <li><a href="/" class="text-silver footer-link">Home</a></li>
+                <li><a href="/ueber-uns" class="text-silver footer-link">Über uns</a></li>
+                <li><a href="/kontakt" class="text-silver footer-link">Kontakt</a></li>
+                <li><a href="/blog" class="text-silver footer-link">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script is:inline src="/js/index.js"></script>
+</Layout>
