@@ -459,7 +459,7 @@
 }
 .bg-hero {
     position: relative;
-    overflow: hidden;
+    min-height: 100svh;
 }
 .bg-hero video {
     position: absolute;
@@ -472,6 +472,7 @@
 }
 .bg-hero .overlay-hero {
     position: relative;
+    min-height: 100svh;
     z-index: 1;
 }
 .overlay-hero {
