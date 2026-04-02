@@ -458,8 +458,21 @@
     width: 70%;
 }
 .bg-hero {
-    background-image: url('../img/bg-1.jpg');
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.bg-hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.bg-hero .overlay-hero {
+    position: relative;
+    z-index: 1;
 }
 .overlay-hero {
     background-color: rgba(17, 32, 21, 0.6); 
