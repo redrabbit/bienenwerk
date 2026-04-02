@@ -469,6 +469,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    filter: grayscale(100%) sepia(80%) contrast(1.2);
 }
 .bg-hero .overlay-hero {
     position: relative;
@@ -476,7 +477,7 @@
     z-index: 1;
 }
 .overlay-hero {
-    background-color: rgba(17, 32, 21, 0.6); 
+    background-color: rgba(34, 85, 34, 0.45);
     padding-bottom: 100px;
 }
 .border-hero {
