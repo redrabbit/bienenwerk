@@ -1,0 +1,616 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Kontakt – Bienenwerk">
+    <div class="about-bg">
+        <!-- Navbar Start -->
+        <div
+            class="container d-none d-lg-flex justify-content-between border-hero"
+        >
+            <div class="d-flex gap-2 py-2">
+                <a
+                    href="#"
+                    class="icon-circle-32 share"
+                    data-share-to="instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div id="alert-container"></div>
+            <div
+                class="d-flex gap-3 align-items-center justify-content-center lato c-white"
+            >
+                <div>
+                    <i class="fa-regular fa-envelope fs-16"></i><span
+                        class="ms-2 fs-13">info@bienenwerk.at</span
+                    >
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone me-2 fs-16"></i><span
+                        class="fs-13">+43 123 456 789</span
+                    >
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark lato">
+            <div class="container-lg d-flex">
+                <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="/">
+                    <img
+                        src="/img/wivana-logo-dark.png"
+                        alt="Bienenwerk"
+                        width="166"
+                        height="41"
+                        class="d-inline-block align-text-top"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler me-3"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Navigation umschalten"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    data-bs-scroll="true"
+                    aria-labelledby="offcanvasNavbar"
+                >
+                    <div class="offcanvas-header">
+                        <button
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Schließen"></button>
+                    </div>
+                    <div
+                        class="offcanvas-body d-lg-flex justify-content-center"
+                    >
+                        <ul class="navbar-nav gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ueber-uns"
+                                    >Über uns</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/kontakt"
+                                    >Kontakt</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a href="/kontakt" class="btn-light">Termin vereinbaren</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Banner Start -->
+        <div class="width-base">
+            <div
+                class="container w-100 h-100 d-flex justify-content-center align-items-center mt-4 fade-in"
+            >
+                <div>
+                    <h1 class="philosopher banner-title c-white text-center">
+                        Kontakt
+                    </h1>
+                    <div
+                        class="d-flex gap-3 philosopher fs-14 c-silver align-items-center justify-content-center large-padding mt-4"
+                    >
+                        <div>HOME</div>
+                        <i
+                            class="fa-solid fa-arrow-right-long"
+                            style="color: #c7c7c7"></i>
+                        <div>KONTAKT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+    </div>
+
+    <!-- Kontaktformular Start -->
+    <div class="bg-subtle">
+        <div class="width-base">
+            <div class="container fade-in">
+                <div
+                    class="row row-cols-1 row-cols-lg-2 bg-darker border-radius-10"
+                >
+                    <div class="col p-2 p-lg-5">
+                        <div class="mb-5">
+                            <div class="d-flex justify-content-start">
+                                <span class="icon-circle-17"
+                                    ><i class="fa-solid fa-plus"></i></span
+                                >
+                                <span class="ms-2 philosopher fs-14 c-white"
+                                    >SCHREIBEN SIE UNS</span
+                                >
+                            </div>
+                            <div class="title-about mt-1 mb-4 c-white">
+                                Nehmen Sie Kontakt auf
+                            </div>
+                            <p class="text-silver">
+                                Haben Sie Fragen zu unseren Honigprodukten,
+                                Imkerei-Touren oder möchten Sie einfach mehr
+                                über die Welt der Bienen erfahren? Wir freuen
+                                uns auf Ihre Nachricht.
+                            </p>
+                        </div>
+                        <form
+                            class="bg-semi-white p-3 p-lg-4 mt-5 form"
+                            action="#"
+                            method="post"
+                            id="contactForm"
+                        >
+                            <div class="popup-message" id="popupMessageContact">
+                                <div>
+                                    <i class="fa-solid fa-check fa-2xl"></i>
+                                </div>
+                                Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+                            </div>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <input
+                                        type="text"
+                                        id="firstname"
+                                        class="form-input"
+                                        placeholder="Vorname"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                        type="text"
+                                        id="lastname"
+                                        class="form-input"
+                                        placeholder="Nachname"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        class="form-input"
+                                        placeholder="Ihre E-Mail"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="form-input"
+                                        placeholder="Telefonnummer"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-row full-width">
+                                <div class="form-field">
+                                    <textarea
+                                        id="message"
+                                        class="form-textarea"
+                                        rows="4"
+                                        placeholder="Ihre Nachricht"
+                                        required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row full-width mt-3">
+                                <button type="submit" class="form-button"
+                                    >Nachricht senden</button
+                                >
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col px-0 position-relative">
+                        <img
+                            src="img/contact-form.jpg"
+                            alt="Bienenwerk Kontakt"
+                            class="w-100 h-100 contact-image"
+                        />
+                        <div class="contact-card">
+                            <div class="card-body bg-semi-white">
+                                <div class="d-flex flex-column gap-3">
+                                    <div>
+                                        <i
+                                            class="fa-solid fa-location-dot c-main me-1 fs-22"
+                                        ></i>
+                                        <span class="text-grey">Österreich</span
+                                        >
+                                    </div>
+                                    <div>
+                                        <i
+                                            class="fa-solid fa-phone c-main me-1 fs-22"
+                                        ></i>
+                                        <span class="text-grey"
+                                            >+43 123 456 789</span
+                                        >
+                                    </div>
+                                    <div>
+                                        <i
+                                            class="fa-regular fa-envelope c-main me-1 fs-22"
+                                        ></i>
+                                        <span class="text-grey"
+                                            >info@bienenwerk.at</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 fade-in">
+                <iframe
+                    loading="lazy"
+                    class="maps overflow-hidden"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4000!2d11.383544419552548!3d47.06060088745832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sat!4v1700000000000!5m2!1sde!2sat"
+                    title="Österreich"
+                    aria-label="Österreich Karte"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Kontaktformular End -->
+
+    <!-- FAQ Start -->
+    <div class="bg-semi-white w-100">
+        <div class="width-base">
+            <div class="container px-0">
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="col fade-in pe-5">
+                        <img
+                            src="img/contact-faqs.jpg"
+                            alt="Häufige Fragen"
+                            class="img-faqs"
+                        />
+                    </div>
+                    <div class="col fade-in ps-4">
+                        <div>
+                            <div>
+                                <span class="icon-circle-17-main"
+                                    ><i class="fa-solid fa-plus c-main"
+                                    ></i></span
+                                >
+                                <span class="ms-2 philosopher fs-14 c-main"
+                                    >FAQ</span
+                                >
+                            </div>
+                            <div class="title-about c-semi-black">
+                                Häufig gestellte Fragen
+                            </div>
+                        </div>
+                        <div class="accordion mt-5" id="bienenAccordion">
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingOne">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                    >
+                                        Wie kann ich Ihren Honig bestellen?
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne"
+                                    data-bs-parent="#bienenAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        Sie können unseren Honig direkt über
+                                        unser Kontaktformular oder telefonisch
+                                        bestellen. Wir bieten auch lokale
+                                        Abholung direkt bei uns an und
+                                        informieren Sie gerne über aktuelle
+                                        Verfügbarkeiten.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingTwo">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo"
+                                    >
+                                        Bieten Sie Imkerei-Touren an?
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo"
+                                    data-bs-parent="#bienenAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        Ja! Wir bieten geführte Touren durch
+                                        unsere Imkerei an – für Schulklassen,
+                                        Familien und alle Naturbegeisterten.
+                                        Erleben Sie hautnah, wie unsere Bienen
+                                        leben und wie Honig entsteht. Eine
+                                        Voranmeldung ist erforderlich.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <span
+                                    class="accordion-header"
+                                    id="headingThree"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree"
+                                    >
+                                        Ist Ihr Honig bio-zertifiziert?
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseThree"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree"
+                                    data-bs-parent="#bienenAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        Unser Honig wird nach traditionellen
+                                        Methoden gewonnen und vollständig
+                                        naturbelassen abgefüllt – ohne
+                                        Zusatzstoffe oder Erhitzung. Für Details
+                                        zu unseren Zertifizierungen kontaktieren
+                                        Sie uns gerne direkt.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingFour">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFour"
+                                    >
+                                        Wie lange ist Ihr Honig haltbar?
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseFour"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour"
+                                    data-bs-parent="#bienenAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        Naturreiner Honig ist bei richtiger
+                                        Lagerung (kühl, trocken, lichtgeschützt)
+                                        nahezu unbegrenzt haltbar. Wir empfehlen
+                                        eine Aufbewahrung bei Raumtemperatur und
+                                        das Verzehren innerhalb von zwei Jahren
+                                        für besten Geschmack.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingFive">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFive"
+                                    >
+                                        Kann ich die Imkerei persönlich
+                                        besuchen?
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseFive"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFive"
+                                    data-bs-parent="#bienenAccordion"
+                                >
+                                    <div class="accordion-body">
+                                        Besuche sind nach vorheriger
+                                        Vereinbarung herzlich willkommen. Wir
+                                        zeigen Ihnen unsere Bienenstöcke,
+                                        erklären die Imkerei und Sie können
+                                        unseren frischen Honig direkt vor Ort
+                                        verkosten und kaufen.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
+
+    <!-- Footer Start -->
+    <div class="bg-darker w-100">
+        <div class="width-base">
+            <div class="container px-0 footer-padding">
+                <div class="row row-cols-1 row-cols-lg-2 g-3">
+                    <div class="col">
+                        <div>
+                            <a href="/"
+                                ><img
+                                    src="/img/wivana-logo-dark.png"
+                                    alt="Bienenwerk"
+                                    class="footer-logo"
+                                /></a
+                            >
+                        </div>
+                        <div class="my-4">
+                            <div class="text-silver subtext-footer">
+                                Naturreiner Honig aus leidenschaftlicher
+                                Imkerei.
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 py-2">
+                            <span
+                                class="icon-circle-32 bg-grey share"
+                                data-share-to="instagram"
+                            >
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-end align-items-end">
+                        <form class="newsletter-container" id="newsletterForm">
+                            <h3 class="text-subtitle c-white">Newsletter</h3>
+                            <div class="popup-message" id="popupMessage">
+                                <div>
+                                    <i class="fa-solid fa-check fa-2xl"></i>
+                                </div>
+                                Danke! Sie haben sich erfolgreich angemeldet.
+                            </div>
+                            <div class="newsletter-form">
+                                <input
+                                    type="email"
+                                    placeholder="Ihre E-Mail"
+                                    class="email-input"
+                                />
+                                <button type="submit" class="btn-newsletter">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 207.99"
+                                        width="32"
+                                        height="15"
+                                    >
+                                        <defs
+                                            ><style>
+                                                .cls-1 {
+                                                    fill: #fff;
+                                                    stroke-width: 0px;
+                                                }
+                                            </style></defs
+                                        >
+                                        <path
+                                            class="cls-1"
+                                            d="M504.66,85.8L422.97,4.11c-5.48-5.48-14.36-5.48-19.83,0-5.48,5.48-5.48,14.36,0,19.83l66.02,66.02H162.65c-7.75,0-14.03,6.27-14.03,14.03s6.27,14.03,14.03,14.03h305.63l-66.05,66.02c-5.48,5.48-5.48,14.36,0,19.83,2.74,2.74,6.33,4.11,9.92,4.11s7.18-1.37,9.92-4.11l82.6-82.57c9.78-9.78,9.78-25.72,0-35.51Z"
+                                        ></path>
+                                        <path
+                                            class="cls-1"
+                                            d="M120.87,89.97H14.03c-7.75,0-14.03,6.27-14.03,14.03s6.27,14.03,14.03,14.03h106.84c7.75,0,14.03-6.27,14.03-14.03s-6.27-14.03-14.03-14.03Z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-lg-4">
+                        <h3 class="text-subtitle c-white mb-4">
+                            Öffnungszeiten
+                        </h3>
+                        <p class="text-silver mb-4">
+                            Wir freuen uns auf Ihren Besuch
+                        </p>
+                        <div class="mb-2">
+                            <i
+                                class="fa-regular fa-clock"
+                                style="color: #c7c7c7"></i>
+                            <span class="text-silver">
+                                Mo–Fr: 9:00–18:00 Uhr</span
+                            >
+                        </div>
+                        <div>
+                            <i
+                                class="fa-regular fa-clock"
+                                style="color: #c7c7c7"></i>
+                            <span class="text-silver">
+                                Sa–So: nach Vereinbarung</span
+                            >
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div>
+                            <h3
+                                class="text-subtitle c-white mb-3 mb-lg-4 mt-5 mt-lg-0"
+                            >
+                                Adresse
+                            </h3>
+                            <div>
+                                <p class="text-silver pe-5">Österreich</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-subtitle c-white my-4">Kontakt</h3>
+                            <div>
+                                <p class="text-silver my-0">+43 123 456 789</p>
+                                <p class="text-silver">info@bienenwerk.at</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-1"></div>
+                    <div class="col-12 col-lg-2">
+                        <h3
+                            class="text-subtitle c-white mb-0 mb-lg-4 mt-5 mt-lg-0"
+                        >
+                            Navigation
+                        </h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="/" class="text-silver footer-link"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/ueber-uns"
+                                    class="text-silver footer-link">Über uns</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/kontakt"
+                                    class="text-silver footer-link">Kontakt</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/blog" class="text-silver footer-link"
+                                    >Blog</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+</Layout>
