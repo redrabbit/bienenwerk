@@ -544,6 +544,10 @@ button.nav-link:focus {
 .bg-hero {
     position: relative;
     min-height: 100svh;
+    background-image: url("../video/hero-poster.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .bg-hero video {
     position: absolute;
