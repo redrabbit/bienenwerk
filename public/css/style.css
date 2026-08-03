@@ -606,6 +606,11 @@ button.nav-link:focus {
     background-position: center;
     height: 512px;
 }
+.werkstatt-bg {
+    background-image:
+        linear-gradient(rgba(17, 32, 21, 0.6), rgba(17, 32, 21, 0.6)),
+        url("../img/werkstatt-hero.jpg");
+}
 .img-about {
     border-radius: 10px;
     width: 100%;
