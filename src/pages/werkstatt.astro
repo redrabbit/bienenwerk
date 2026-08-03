@@ -2,206 +2,129 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Bienenwerk">
-    <!-- BG Hero Start -->
-    <div class="bg-hero">
-        <video autoplay muted loop playsinline poster="/video/hero-poster.jpg">
-            <source src="/video/hero.mp4" type="video/mp4" />
-        </video>
-        <div class="overlay-hero">
-            <!-- Navbar Start -->
-            <div
-                class="container d-none d-lg-flex justify-content-between border-hero"
-            >
-                <div class="d-flex gap-2 py-2">
-                    <a
-                        href="#"
-                        class="icon-circle-32 share"
-                        data-share-to="facebook"
-                    >
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a
-                        href="https://www.instagram.com/bienen_werk/"
-                        class="icon-circle-32"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="Bienenwerk auf Instagram"
-                    >
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-                <div id="alert-container"></div>
-                <div
-                    class="d-flex gap-3 align-items-center justify-content-center lato c-white"
+<Layout title="Werkstatt – Bienenwerk">
+    <div class="about-bg">
+        <!-- Navbar Start -->
+        <div
+            class="container d-none d-lg-flex justify-content-between border-hero"
+        >
+            <div class="d-flex gap-2 py-2">
+                <a
+                    href="https://www.instagram.com/bienen_werk/"
+                    class="icon-circle-32"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Bienenwerk auf Instagram"
                 >
-                    <div>
-                        <i class="fa-regular fa-envelope fs-16"></i><span
-                            class="ms-2 fs-13">lia@bienenwerk.at</span
-                        >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div id="alert-container"></div>
+            <div
+                class="d-flex gap-3 align-items-center justify-content-center lato c-white"
+            >
+                <div>
+                    <i class="fa-regular fa-envelope fs-16"></i><span
+                        class="ms-2 fs-13">lia@bienenwerk.at</span
+                    >
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone me-2 fs-16"></i><span
+                        class="fs-13">+43 650 850 8750</span
+                    >
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark lato">
+            <div class="container-lg d-flex">
+                <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="/">
+                    <img
+                        src="/img/logo-icon.png"
+                        alt="Bienenwerk"
+                        width="166"
+                        height="120"
+                        class="d-inline-block align-text-top"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler me-3"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Navigation umschalten"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="offcanvas offcanvas-start"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    data-bs-scroll="true"
+                    aria-labelledby="offcanvasNavbar"
+                >
+                    <div class="offcanvas-header">
+                        <button
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Schließen"></button>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-phone me-2 fs-16"></i><span
-                            class="fs-13">+43 123 456 789</span
-                        >
+                    <div
+                        class="offcanvas-body d-lg-flex justify-content-center"
+                    >
+                        <ul class="navbar-nav gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/werkstatt"
+                                    >Werkstatt</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kontakt">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a href="/kontakt" class="btn-light">Termin vereinbaren</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Banner Start -->
+        <div class="width-base">
+            <div
+                class="container w-100 h-100 d-flex justify-content-center align-items-center mt-4 fade-in"
+            >
+                <div>
+                    <h1 class="philosopher banner-title c-white text-center">
+                        Werkstatt
+                    </h1>
+                    <div
+                        class="d-flex gap-3 philosopher fs-14 c-silver align-items-center justify-content-center large-padding mt-4"
+                    >
+                        <div>HOME</div>
+                        <i
+                            class="fa-solid fa-arrow-right-long"
+                            style="color: #c7c7c7"></i>
+                        <div>WERKSTATT</div>
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-dark lato">
-                <div class="container-lg d-flex">
-                    <a class="navbar-brand ms-0 ms-sm-3 ms-lg-0" href="/">
-                        <img
-                            src="/img/logo.png"
-                            alt="Bienenwerk"
-                            width="166"
-                            height="60"
-                            class="d-inline-block align-text-top"
-                        />
-                    </a>
-                    <button
-                        class="navbar-toggler me-3"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar"
-                        aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                        <span class="navbar-toggler-icon"></span>
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="offcanvas offcanvas-start"
-                        tabindex="-1"
-                        id="offcanvasNavbar"
-                        data-bs-scroll="true"
-                        aria-labelledby="offcanvasNavbar"
-                    >
-                        <div class="offcanvas-header">
-                            <button
-                                type="button"
-                                class="btn-close text-reset"
-                                data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div
-                            class="offcanvas-body d-lg-flex justify-content-center"
-                        >
-                            <ul class="navbar-nav gap-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="/">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/werkstatt"
-                                        >Werkstatt</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/kontakt"
-                                        >Kontakt</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/blog">Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="d-none d-lg-flex">
-                        <a href="/kontakt" class="btn-light"
-                            >Termin vereinbaren</a
-                        >
-                    </div>
-                </div>
-            </nav>
-            <!-- Navbar End -->
-
-            <!-- Hero Section Start -->
-            <section class="section-m mx-auto container-lg">
-                <div class="c-white mb-4 mb-lg-0 fade-in">
-                    <div>
-                        <span class="icon-circle-17"
-                            ><i class="fa-solid fa-plus"></i></span
-                        >
-                        <span class="ms-2 philosopher fs-14"
-                            >BIENENWERK – IMKEREI & HONIG</span
-                        >
-                    </div>
-                    <h1 class="hero-title mt-3 mb-5">
-                        Erleben Sie die Welt der Bienen und unseren naturreinen
-                        Honig
-                    </h1>
-                    <div>
-                        <p class="lato fs-16 c-silver hero-subtitle">
-                            Willkommen im bienenwerk – der Ort für Entspannung,
-                            geführte Touren und alles rund um die faszinierende
-                            Welt der Bienen.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-block d-lg-flex gap-5 content-m">
-                    <div class="form-container fade-in">
-                        <form
-                            action="#"
-                            class="d-block d-lg-flex gap-4 align-items-center justify-content-between"
-                        >
-                            <div class="mb-3">
-                                <label
-                                    for="name"
-                                    class="c-white philosopher fs-14"
-                                    >IHR NAME</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="name"
-                                    placeholder="Maja Biene"
-                                    required
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label
-                                    for="phone"
-                                    class="c-white philosopher fs-14"
-                                    >IHRE NUMMER</label
-                                >
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    id="phone"
-                                    placeholder="32168"
-                                    required
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label
-                                    for="date"
-                                    class="c-white philosopher fs-14"
-                                    >Datum</label
-                                >
-                                <input
-                                    type="date"
-                                    class="form-control date"
-                                    id="date"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <button class="btn-light mt-3"
-                                    >Tour buchen</button
-                                >
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- Hero Section End -->
         </div>
+        <!-- Banner End -->
     </div>
-    <!-- BG Hero End -->
 
-    <!-- About Start -->
+    <!-- Über uns Start -->
     <div class="bg-subtle w-100">
         <div class="width-base">
             <div class="container">
@@ -211,15 +134,15 @@ import Layout from "../layouts/Layout.astro";
                             <div class="col d-flex flex-column gap-3">
                                 <div>
                                     <img
-                                        src="/img/sonnenblume.jpg"
-                                        alt="Imkerei"
+                                        src="/img/wiese.jpg"
+                                        alt="Blühende Wiese"
                                         class="img-about"
                                     />
                                 </div>
                                 <div>
                                     <img
                                         src="/img/biene-blume.jpg"
-                                        alt="Imkerei"
+                                        alt="Biene auf Blüte"
                                         class="img-about"
                                     />
                                 </div>
@@ -228,7 +151,7 @@ import Layout from "../layouts/Layout.astro";
                                 <div>
                                     <img
                                         src="/img/blumen-hand.jpg"
-                                        alt="Imkerei"
+                                        alt="Wildblumen in der Hand"
                                         class="img-about-last"
                                     />
                                 </div>
@@ -245,17 +168,19 @@ import Layout from "../layouts/Layout.astro";
                                     ></i></span
                                 >
                                 <span class="ms-2 philosopher fs-14 c-main"
-                                    >ÜBER UNS</span
+                                    >UNSERE WERKSTATT</span
                                 >
                             </div>
                             <div class="title-about c-semi-black mt-4">
-                                Leidenschaft für Bienen und naturreinen Honig
+                                Wo aus Leidenschaft naturreiner Honig entsteht
                             </div>
                         </div>
                         <span class="text-grey"
-                            >Bei Bienenwerk verbinden wir traditionelle Imkerei
-                            mit modernem Wissen – für Honig, der schmeckt wie
-                            die Natur ihn gemeint hat.</span
+                            >In unserer Werkstatt vereinen wir traditionelles
+                            Imkerhandwerk mit viel Sorgfalt und Liebe zum Detail.
+                            Hier wird geschleudert, abgefüllt und mit Bedacht
+                            verarbeitet – damit in jedem Glas ein Stück
+                            unberührter Natur steckt.</span
                         >
                         <div class="d-block d-lg-flex">
                             <div class="d-flex align-items-center my-3">
@@ -265,12 +190,12 @@ import Layout from "../layouts/Layout.astro";
                             </div>
                             <div>
                                 <span class="text-subtitle c-semi-black my-4"
-                                    >Naturreiner Honig</span
+                                    >Handwerk mit Tradition</span
                                 >
                                 <br />
                                 <p class="text-grey my-3">
-                                    Unsere Bienen sammeln in unberührter Natur –
-                                    ohne Zusätze, ohne Kompromisse.
+                                    Jeder Arbeitsschritt erfolgt schonend und von
+                                    Hand – für Honig in bester Qualität.
                                 </p>
                             </div>
                         </div>
@@ -282,12 +207,12 @@ import Layout from "../layouts/Layout.astro";
                             </div>
                             <div>
                                 <span class="text-subtitle c-semi-black my-4"
-                                    >Geführte Touren</span
+                                    >Nähe zur Natur</span
                                 >
                                 <br />
                                 <p class="text-grey my-3">
-                                    Erleben Sie hautnah, wie Bienen leben und
-                                    Honig entsteht – für Groß und Klein.
+                                    Unsere Bienen leben inmitten blühender
+                                    Wiesen, fernab von Hektik und Belastung.
                                 </p>
                             </div>
                         </div>
@@ -296,7 +221,7 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Über uns End -->
 
     <!-- Footer Start -->
     <div class="bg-darker w-100">
@@ -307,10 +232,10 @@ import Layout from "../layouts/Layout.astro";
                         <div>
                             <a href="/"
                                 ><img
-                                    src="/img/logo.png"
+                                    src="/img/logo-icon.png"
                                     alt="Bienenwerk"
                                     width="166"
-                                    height="140"
+                                    height="120"
                                     class="d-inline-block align-text-top"
                                 /></a
                             >
