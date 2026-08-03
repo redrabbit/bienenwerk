@@ -600,7 +600,7 @@ button.nav-link:focus {
 /* About Style */
 .about-bg {
     background-image:
-        linear-gradient(rgba(17, 32, 21, 0.6), rgba(17, 32, 21, 0.6)),
+        linear-gradient(178deg, rgba(188, 164, 70, 0.6), rgba(17, 32, 21, 0.2) 77.73%),
         url("../img/about-overlay.jpg");
     background-size: cover;
     background-position: center;
